@@ -1,5 +1,8 @@
 extends Node2D
 
+
+
+# Player stuff
 var warrior = {
 	"texture":"res://Assets/Tiles/tile_0087.png"
 }
@@ -18,6 +21,16 @@ var classes :Dictionary = {
 		"villager":villager,
 		"wizard":wizard,
 		
+}
+
+#weapon stuff 
+
+var sword : Dictionary = {
+	"texture":"res://Assets/Tiles/tile_0104.png"
+}
+
+var weaponClasses : Dictionary = {
+		"sword" : sword,	
 }
 
 func _ready():

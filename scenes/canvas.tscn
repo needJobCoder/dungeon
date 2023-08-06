@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://jvbcpxe78f48"]
+
+[ext_resource type="Texture2D" uid="uid://68yhj4swqcxf" path="res://Assets/UI/PNG/blue_sliderUp.png" id="1_rrnks"]
+[ext_resource type="Texture2D" uid="uid://28v6huslx4pd" path="res://Assets/UI/PNG/blue_sliderRight.png" id="2_aavcr"]
+[ext_resource type="Texture2D" uid="uid://dbs0yed8w6khf" path="res://Assets/UI/PNG/blue_sliderDown.png" id="3_ms4jg"]
+[ext_resource type="Texture2D" uid="uid://fmx1wtcfyt77" path="res://Assets/UI/PNG/blue_sliderLeft.png" id="4_ncnt7"]
+
+[node name="Canvas" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = -70.0
+offset_right = 91.0
+offset_bottom = -30.0
+grow_vertical = 0
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Control"]
+position = Vector2(-26, -137)
+metadata/_edit_group_ = true
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control/CanvasGroup"]
+position = Vector2(56, -22)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_rrnks")
+action = "ui_up"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Control/CanvasGroup"]
+position = Vector2(112, 58)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_aavcr")
+action = "ui_right"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Control/CanvasGroup"]
+position = Vector2(56, 122)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("3_ms4jg")
+action = "ui_down"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="Control/CanvasGroup"]
+position = Vector2(-24, 58)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_ncnt7")
+action = "ui_left"
