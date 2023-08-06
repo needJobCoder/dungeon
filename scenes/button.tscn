@@ -1,14 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmr81fvgpiq2f"]
+[gd_scene load_steps=8 format=3 uid="uid://cmr81fvgpiq2f"]
 
-[ext_resource type="Texture2D" uid="uid://bnrbyll5dl453" path="res://Assets/UI/PNG/yellow_button06.png" id="1_vhlxb"]
-[ext_resource type="Texture2D" uid="uid://ct0yvalpf3m05" path="res://Assets/UI/PNG/blue_cross.png" id="2_hd18u"]
+[ext_resource type="Texture2D" uid="uid://cahd42sgeyjl" path="res://Assets/UI/PNG/grey_panel.png" id="1_caigh"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="2_vg4dy"]
 [ext_resource type="FontFile" uid="uid://ctis65ym6r2o" path="res://Assets/UI/Font/kenvector_future.ttf" id="3_0qsj3"]
+[ext_resource type="Texture2D" uid="uid://hy1v74hi8vk4" path="res://Assets/UI/PNG/yellow_cross.png" id="3_e1mbs"]
 
 [sub_resource type="Theme" id="Theme_uegcu"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4uugn"]
-texture = ExtResource("1_vhlxb")
 
 [sub_resource type="Theme" id="Theme_wyfbl"]
 default_font = ExtResource("3_0qsj3")
@@ -55,12 +52,12 @@ cache/0/12/0/kerning_overrides/2/0 = Vector2(0, 0)
 cache/0/12/0/kerning_overrides/8/0 = Vector2(0, 0)
 cache/0/12/0/kerning_overrides/12/0 = Vector2(0, 0)
 
-[node name="Button" type="Button"]
-custom_minimum_size = Vector2(100, 100)
+[node name="Button" type="TextureButton"]
+custom_minimum_size = Vector2(90, 90)
 offset_right = 60.0
 offset_bottom = 60.0
 theme = SubResource("Theme_uegcu")
-theme_override_styles/normal = SubResource("StyleBoxTexture_4uugn")
+texture_normal = ExtResource("1_caigh")
 script = ExtResource("2_vg4dy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -70,7 +67,7 @@ offset_left = 10.0
 offset_top = 6.0
 offset_right = 50.0
 offset_bottom = 46.0
-texture = ExtResource("2_hd18u")
+texture = ExtResource("3_e1mbs")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0.203922, 0.129412, 0.713726, 1)

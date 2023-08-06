@@ -33,6 +33,19 @@ var weaponClasses : Dictionary = {
 		"sword" : sword,	
 }
 
+#Picakble Objects
+
+var healthPotion = {
+	"itemName":"healthPotion",
+	"itemCount":1,
+	"isStackable":true,
+	"itemTexture":"res://Assets/Tiles/tile_0115.png"
+}
+
+var pickableObjects = {
+	"healthPotion":healthPotion
+}
+
 func _ready():
 	pass
 

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbo14vari7k0d"]
+
+[ext_resource type="Script" path="res://scripts/health_potion.gd" id="1_0isax"]
+[ext_resource type="Texture2D" uid="uid://cad1ijf5totr1" path="res://Assets/Tiles/tile_0115.png" id="1_iygb2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dl7l7"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yq2ci"]
+radius = 16.0
+height = 32.0
+
+[node name="healthPotion" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_0isax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dl7l7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iygb2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_yq2ci")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

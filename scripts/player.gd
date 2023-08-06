@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+#signals
+signal sendPickableObjectData(itemName : String, itemCount: int, isStackable, pickableObjectRef : StaticBody2D, itemTexture: String)
 
 var SPEED = 50
 var LERP_FACTOR = 0.7
@@ -26,7 +28,7 @@ var lookingState = direction.right
 
 
 func _ready():
-	
+	testSignal()
 	playerAnimationPlayer.speed_scale = ATTACK_ANIM_SPEED
 	playerAnimationPlayer.play("RESET")
 	getWeaponAnimationPlayer()
@@ -114,4 +116,19 @@ func _on_animation_player_animation_started(anim_name):
 
 func _on_animation_player_2_animation_finished(anim_name):
 	pass
+
+
+
+func _on_area_2d_body_entered(body):
+	if body is StaticBody2D:
+		if body.input_pickable == true:
+			print("signal sent")
+			emit_signal("sendPickableObjectData", body.itemName, body.itemCount, body.isStackable, body, body.itemTexture)
+
+func getPickableData(itemName, itemCount, isStackable, body, itemTexture):
+	print(itemName, itemCount, isStackable, body, itemTexture)
+		
+func testSignal():
+	sendPickableObjectData.connect(getPickableData)
+	
 
