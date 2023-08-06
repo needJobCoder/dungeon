@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://chddynb5fuqa5"]
+[gd_scene load_steps=3 format=3 uid="uid://chddynb5fuqa5"]
+
+[ext_resource type="PackedScene" uid="uid://dyfji1w1ucok3" path="res://scenes/enemy.tscn" id="1_31hie"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_jqdlt"]
+vertices = PackedVector2Array(29, 13, 1265, 14, 1260, 715, 20, 718)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(29, 13, 1265, 14, 1260, 715, 20, 718)])
 
 [node name="enemyBehaviourTest" type="Node2D"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_jqdlt")
+
+[node name="enemy" parent="." instance=ExtResource("1_31hie")]
+position = Vector2(92, 84)
