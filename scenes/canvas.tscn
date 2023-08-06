@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://jvbcpxe78f48"]
+[gd_scene load_steps=8 format=3 uid="uid://jvbcpxe78f48"]
 
+[ext_resource type="Script" path="res://scripts/canvas.gd" id="1_1s8q2"]
 [ext_resource type="Texture2D" uid="uid://68yhj4swqcxf" path="res://Assets/UI/PNG/blue_sliderUp.png" id="1_rrnks"]
 [ext_resource type="Texture2D" uid="uid://28v6huslx4pd" path="res://Assets/UI/PNG/blue_sliderRight.png" id="2_aavcr"]
 [ext_resource type="Texture2D" uid="uid://dbs0yed8w6khf" path="res://Assets/UI/PNG/blue_sliderDown.png" id="3_ms4jg"]
 [ext_resource type="Texture2D" uid="uid://fmx1wtcfyt77" path="res://Assets/UI/PNG/blue_sliderLeft.png" id="4_ncnt7"]
+[ext_resource type="Texture2D" uid="uid://dti5wv7xcwwxs" path="res://Assets/UI/PNG/blue_button00.png" id="6_7sjpl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbp3p"]
+texture = ExtResource("6_7sjpl")
 
 [node name="Canvas" type="CanvasLayer"]
+script = ExtResource("1_1s8q2")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -45,3 +51,37 @@ position = Vector2(-24, 58)
 scale = Vector2(2, 2)
 texture_normal = ExtResource("4_ncnt7")
 action = "ui_left"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -48.0
+offset_right = -24.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_group_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Control2"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -996.0
+offset_top = -217.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dbp3p")
+
+[node name="GridContainer" type="GridContainer" parent="Control2/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 12

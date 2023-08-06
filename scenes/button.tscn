@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmr81fvgpiq2f"]
+
+[ext_resource type="Texture2D" uid="uid://bnrbyll5dl453" path="res://Assets/UI/PNG/yellow_button06.png" id="1_vhlxb"]
+[ext_resource type="Texture2D" uid="uid://ct0yvalpf3m05" path="res://Assets/UI/PNG/blue_cross.png" id="2_hd18u"]
+[ext_resource type="FontFile" uid="uid://ctis65ym6r2o" path="res://Assets/UI/Font/kenvector_future.ttf" id="3_0qsj3"]
+
+[sub_resource type="Theme" id="Theme_uegcu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4uugn"]
+texture = ExtResource("1_vhlxb")
+
+[sub_resource type="Theme" id="Theme_wyfbl"]
+default_font = ExtResource("3_0qsj3")
+default_font_size = 16
+
+[sub_resource type="FontFile" id="FontFile_msmtw"]
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/2/0/ascent = 0.0
+cache/0/2/0/descent = 0.0
+cache/0/2/0/underline_position = 0.0
+cache/0/2/0/underline_thickness = 0.0
+cache/0/2/0/scale = 1.0
+cache/0/2/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/8/0/ascent = 0.0
+cache/0/8/0/descent = 0.0
+cache/0/8/0/underline_position = 0.0
+cache/0/8/0/underline_thickness = 0.0
+cache/0/8/0/scale = 1.0
+cache/0/8/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/12/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/12/0 = Vector2(0, 0)
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 60.0
+offset_bottom = 60.0
+theme = SubResource("Theme_uegcu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4uugn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 46.0
+texture = ExtResource("2_hd18u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0.203922, 0.129412, 0.713726, 1)
+custom_minimum_size = Vector2(40, 30)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 75.0
+offset_right = 88.0
+offset_bottom = 105.0
+theme = SubResource("Theme_wyfbl")
+theme_override_fonts/normal_font = SubResource("FontFile_msmtw")
+text = "Item Name"
+scroll_active = false

@@ -1,9 +1,14 @@
+RichTextLabel
+TextureRect
+Button
+GridContainer
+PanelContainer
+Control
 NavigationAgent2D
 NavigationRegion2D
 Sprite2D
 CollisionShape2D
 CharacterBody2D
-Control
 CanvasGroup
 CanvasLayer
 TouchScreenButton
