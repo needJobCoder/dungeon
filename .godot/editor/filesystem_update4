@@ -11,3 +11,4 @@ res://scripts/enemy.gd
 res://scenes/enemy_behaviour_test.tscn
 res://scripts/canvas.gd
 res://scenes/button.tscn
+res://scripts/button.gd

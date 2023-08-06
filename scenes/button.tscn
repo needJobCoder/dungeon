@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmr81fvgpiq2f"]
+[gd_scene load_steps=9 format=3 uid="uid://cmr81fvgpiq2f"]
 
 [ext_resource type="Texture2D" uid="uid://bnrbyll5dl453" path="res://Assets/UI/PNG/yellow_button06.png" id="1_vhlxb"]
 [ext_resource type="Texture2D" uid="uid://ct0yvalpf3m05" path="res://Assets/UI/PNG/blue_cross.png" id="2_hd18u"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="2_vg4dy"]
 [ext_resource type="FontFile" uid="uid://ctis65ym6r2o" path="res://Assets/UI/Font/kenvector_future.ttf" id="3_0qsj3"]
 
 [sub_resource type="Theme" id="Theme_uegcu"]
@@ -60,6 +61,7 @@ offset_right = 60.0
 offset_bottom = 60.0
 theme = SubResource("Theme_uegcu")
 theme_override_styles/normal = SubResource("StyleBoxTexture_4uugn")
+script = ExtResource("2_vg4dy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(80, 80)
@@ -82,3 +84,5 @@ theme = SubResource("Theme_wyfbl")
 theme_override_fonts/normal_font = SubResource("FontFile_msmtw")
 text = "Item Name"
 scroll_active = false
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

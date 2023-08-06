@@ -54,18 +54,16 @@ action = "ui_left"
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -48.0
-offset_right = -24.0
-offset_bottom = -8.0
+anchor_left = 1.001
+anchor_top = 0.876
+anchor_right = 1.001
+anchor_bottom = 0.876
+offset_left = -40.28
+offset_top = -39.72
+offset_right = -0.280029
+offset_bottom = 0.279968
 grow_horizontal = 0
-grow_vertical = 0
-metadata/_edit_group_ = true
+grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Control2"]
 layout_mode = 1
@@ -74,14 +72,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -996.0
-offset_top = -217.0
+offset_left = -350.0
+offset_top = -590.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_dbp3p")
 
 [node name="GridContainer" type="GridContainer" parent="Control2/PanelContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-columns = 12
+columns = 2

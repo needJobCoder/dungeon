@@ -1,11 +1,38 @@
 extends Button
 
+@export var isEmpty: bool = true
+@export var itemName : String = ""
+@export var itemCount : int = 0
+@export var isStackable : bool = false
+@export var isSelected : bool = false
+@export var id : int = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var selectedButtonTexture :String = "res://Assets/UI/PNG/red_button00.png"
+
+var buttonProperties = {
+	"isEmpty": isEmpty,
+	"itemName": itemName,
+	"itemCount":itemCount,
+	"isStackable":isStackable,
+	"isSelected":isSelected,
+	"id": id
+}
+
+func _physics_process(delta):
+	if isSelected:
+		pass
+
+func printEverything():
+	print(buttonProperties)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_pressed():
+	buttonProperties = {
+	"isEmpty": isEmpty,
+	"itemName": itemName,
+	"itemCount":itemCount,
+	"isStackable":isStackable,
+	"isSelected":isSelected,
+	"id": id
+}
+	printEverything()
