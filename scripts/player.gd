@@ -13,6 +13,7 @@ var ATTACK_ANIM_SPEED = 2
 @onready var playerAnimationPlayer2 : AnimationPlayer = $AnimationPlayer2
 @onready var playerSprite : Sprite2D = $Sprite2D
 @onready var weaponSprite : Sprite2D 
+@onready var mouseHoldingTextureRect = get_node("mouseHoldingTextureRect")
 var lookingLeft = false
 
 var state : Dictionary = {
@@ -39,6 +40,7 @@ func _physics_process(delta):
 	move_and_slide()
 	handleAttackAnimation()
 	handleMoveAnimation(velocity)
+	quitGame()
 	
 
 func getWeaponAnimationPlayer():
@@ -132,3 +134,6 @@ func testSignal():
 	sendPickableObjectData.connect(getPickableData)
 	
 
+func quitGame():
+	if Input.is_action_just_released("Escape"):
+		get_tree().quit()

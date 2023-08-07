@@ -1,0 +1,9 @@
+res://scenes/pickableObjects/health_potion.tscn::c5b952179308040043dfd83779738329::1691393312::res://.godot/exported/133200997/export-e914f3c5a5da97f7594873b8e28103e8-health_potion.scn
+res://scenes/button.tscn::b97878e2a164513c679aebeb397669e7::1691393312::res://.godot/exported/133200997/export-3122195529add960176a1a95c02b67d5-button.scn
+res://scenes/canvas.tscn::7253bd60cc0b168f1d452789060958ca::1691393313::res://.godot/exported/133200997/export-4df4a6da29d77e067f4cb32ac5eeb2e9-canvas.scn
+res://scenes/enemy.tscn::f124915c5acaf4a7650786cabec58653::1691343036::res://.godot/exported/133200997/export-a930820ec0ab16db6719aff4daa500f9-enemy.scn
+res://scenes/enemy_behaviour_test.tscn::fe3e376a5c8c9acd437d4fe2166a1131::1691343036::res://.godot/exported/133200997/export-944623a611a427d11516d0d206a8a035-enemy_behaviour_test.scn
+res://scenes/global.tscn::bd9f624a6f7801e8b19e76451a68887c::1691343035::res://.godot/exported/133200997/export-c49e1122a5a97eb09526f8c4b4de4935-global.scn
+res://scenes/player.tscn::434d13401fe45b628935da419d66ece8::1691393313::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/test.tscn::618e3b383cc3638c1e4e1067c34b70ed::1691393313::res://.godot/exported/133200997/export-a8ffa8455ee75708b6c34cd8d7888dc7-test.scn
+res://scenes/weapon.tscn::73408471d9cc58c45025e80c63040f3f::1691393313::res://.godot/exported/133200997/export-8f158e3922ca6614c1d0ef7d88ac4bb5-weapon.scn

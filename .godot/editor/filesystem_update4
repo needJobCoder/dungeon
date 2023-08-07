@@ -5,5 +5,3 @@ res://scenes/canvas.tscn
 res://scenes/test.tscn
 res://scenes/player.tscn
 res://scenes/weapon.tscn
-res://scripts/button.gd
-res://scripts/Global.gd

@@ -5,7 +5,7 @@ var LIMIT = 12
 
 @onready var gridContainer : GridContainer = $Control2/PanelContainer/GridContainer
 @onready var player : CharacterBody2D
-@onready var mouseTextureRect : TextureRect = $mouseTextureRect
+@onready var mouseTextureRect : TextureRect
 var buttonScene : PackedScene =  load("res://scenes/button.tscn")
 
 
@@ -15,15 +15,13 @@ var buttonScene : PackedScene =  load("res://scenes/button.tscn")
 
 func _ready():
 	player = get_parent().get_node("player")
+	mouseTextureRect = get_parent().get_node("player/mouseHoldingTextureRect")
 	instantiateButtons()
 	findPlayer()
 	connectSignal()
 
 
 func assignTextureRectPosition():
-	mouseTextureRect.global_position = Global.get_global_mouse_position()
-	mouseTextureRect.global_position.x += 600
-	mouseTextureRect.global_position.y += 300
 	mouseTextureRect.texture = load(Global.mouseitemTexture)
 
 func _physics_process(delta):

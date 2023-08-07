@@ -49,7 +49,7 @@ var pickableObjects = {
 #mouseHold
 var mouseitemName :String = ""
 var mouseitemCount : int = 0
-var mouseitemTexture : String = "res://Assets/UI/PNG/green_button00.png"
+var mouseitemTexture : String = ""
 var mouseisStackable : bool = false
 var mousefromID : int = 0
 var mouseIsEmpty :bool = true

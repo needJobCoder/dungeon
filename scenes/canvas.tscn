@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://jvbcpxe78f48"]
+[gd_scene load_steps=9 format=3 uid="uid://jvbcpxe78f48"]
 
 [ext_resource type="Script" path="res://scripts/canvas.gd" id="1_1s8q2"]
 [ext_resource type="Texture2D" uid="uid://68yhj4swqcxf" path="res://Assets/UI/PNG/blue_sliderUp.png" id="1_rrnks"]
 [ext_resource type="Texture2D" uid="uid://28v6huslx4pd" path="res://Assets/UI/PNG/blue_sliderRight.png" id="2_aavcr"]
 [ext_resource type="Texture2D" uid="uid://dbs0yed8w6khf" path="res://Assets/UI/PNG/blue_sliderDown.png" id="3_ms4jg"]
 [ext_resource type="Texture2D" uid="uid://fmx1wtcfyt77" path="res://Assets/UI/PNG/blue_sliderLeft.png" id="4_ncnt7"]
+[ext_resource type="Texture2D" uid="uid://ur4ml0u0wpk4" path="res://Assets/UI/PNG/red_button09.png" id="6_5kx0t"]
 [ext_resource type="Texture2D" uid="uid://dti5wv7xcwwxs" path="res://Assets/UI/PNG/blue_button00.png" id="6_7sjpl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbp3p"]
@@ -18,10 +19,10 @@ layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 134.0
-offset_top = -68.0
-offset_right = 174.0
-offset_bottom = -28.0
+offset_left = 139.0
+offset_top = -48.0
+offset_right = 179.0
+offset_bottom = -8.0
 grow_vertical = 0
 metadata/_edit_group_ = true
 
@@ -52,18 +53,25 @@ scale = Vector2(4, 4)
 texture_normal = ExtResource("4_ncnt7")
 action = "ui_left"
 
+[node name="attackButton" type="TouchScreenButton" parent="Control/CanvasGroup"]
+position = Vector2(337, 173)
+scale = Vector2(4, 4)
+texture_normal = ExtResource("6_5kx0t")
+action = "Space"
+
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
 anchor_left = 1.001
 anchor_top = 0.876
 anchor_right = 1.001
 anchor_bottom = 0.876
-offset_left = -40.28
-offset_top = -39.72
-offset_right = -0.280029
-offset_bottom = 0.279968
+offset_left = -35.28
+offset_top = 43.28
+offset_right = 4.71997
+offset_bottom = 83.28
 grow_horizontal = 0
 grow_vertical = 2
+metadata/_edit_group_ = true
 
 [node name="PanelContainer" type="PanelContainer" parent="Control2"]
 layout_mode = 1
@@ -84,5 +92,6 @@ size_flags_horizontal = 4
 columns = 2
 
 [node name="mouseTextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(60, 60)
 offset_right = 40.0
 offset_bottom = 40.0

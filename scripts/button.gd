@@ -90,4 +90,11 @@ func manageMouseInventory():
 		itemCount = 0
 		itemTexture = ""
 		isStackable = false
-		
+	elif !Global.mouseIsEmpty and !isEmpty:
+		if Global.mouseitemName == itemName:
+			itemCount += Global.mouseitemCount
+			Global.mouseIsEmpty = true 
+			Global.mouseitemCount = 0
+			Global.mouseitemName = ""
+			Global.mouseitemTexture = ""
+			Global.mouseisStackable = false
