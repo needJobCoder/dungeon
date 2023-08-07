@@ -82,3 +82,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_dbp3p")
 layout_mode = 2
 size_flags_horizontal = 4
 columns = 2
+
+[node name="mouseTextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

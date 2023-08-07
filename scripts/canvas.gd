@@ -1,11 +1,17 @@
 extends CanvasLayer
 
 var ITEM_LIMIT = 100
+var LIMIT = 12
 
 @onready var gridContainer : GridContainer = $Control2/PanelContainer/GridContainer
 @onready var player : CharacterBody2D
+@onready var mouseTextureRect : TextureRect = $mouseTextureRect
 var buttonScene : PackedScene =  load("res://scenes/button.tscn")
-var LIMIT = 12
+
+
+
+#mouse values
+
 
 func _ready():
 	player = get_parent().get_node("player")
@@ -13,10 +19,25 @@ func _ready():
 	findPlayer()
 	connectSignal()
 
+
+func assignTextureRectPosition():
+	mouseTextureRect.global_position = Global.get_global_mouse_position()
+	mouseTextureRect.global_position.x += 600
+	mouseTextureRect.global_position.y += 300
+	mouseTextureRect.texture = load(Global.mouseitemTexture)
+
+func _physics_process(delta):
+	assignTextureRectPosition()
+
+func onButtonPressed(itemName : String, itemCount: int, isStackable: bool, itemTexture:String, id : int):
+	pass
+	
+
 func instantiateButtons():
 	var index = 0
 	for iterate in LIMIT:
 		var instance = buttonScene.instantiate()
+		instance.connect("onPressed", onButtonPressed)
 		instance.id = index
 		gridContainer.add_child(instance)
 		if index == 0:
@@ -60,6 +81,7 @@ func assignDataToInventory(itemName, itemCount, isStackable, pickableObjectRef, 
 		getEmptySlot.itemCount += itemCount
 		getEmptySlot.isStackable = isStackable
 		getEmptySlot.itemTexture = itemTexture
+		getEmptySlot.isEmpty = false
 		
 	print(getEmptySlot)
 	pickableObjectRef.queue_free()
